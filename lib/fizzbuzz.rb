@@ -4,5 +4,9 @@ def fizzbuzz(number)
   #   countup = countup + " #{i}"
   # end
   # puts countup
-  1.upto(20) { |i| puts i}
+  total = ""
+  1.upto(number) do |i|
+    total += i.to_s + " "
+  end
+  total
 end
