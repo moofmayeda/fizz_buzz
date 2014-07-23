@@ -1,12 +1,15 @@
 def fizzbuzz(number)
-  # countup = ""
-  # 1.upto(number) do |i|
-  #   countup = countup + " #{i}"
-  # end
-  # puts countup
   total = ""
   1.upto(number) do |i|
-    total += i.to_s + " "
+    if i % 15 == 0
+      total += "fizzbuzz "
+    elsif i % 3 == 0
+      total += "fizz "
+    elsif i % 5 == 0
+      total += "buzz "
+    else
+      total += i.to_s + " "
+    end
   end
-  total
+  total.strip
 end
